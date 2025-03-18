@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ROSHMAN</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" sizes="any">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./style.css">
+    
+    <style>
+        /* Базовые стили для анимаций */
+        .animated {
+            animation-duration: 1s;
+            animation-fill-mode: both;
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translate3d(0, 100%, 0);
+                visibility: visible;
+            }
+            to {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .name {
+            animation: slideInUp 1s ease-out;
+            opacity: 1; /* Добавляем прозрачность 1 */
+        }
+
+        .block {
+            animation: fadeIn 1s ease-out;
+            opacity: 1; /* Добавляем прозрачность 1 */
+            transform: translateY(0); /* Исправляем начальное положение */
+            transition: all 0.3s ease;
+        }
+
+        .block:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .block:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .entry a {
+            transition: color 0.3s ease;
+        }
+
+        .entry a:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="name animated">ЭДУАРД ЗУБОВ</div>
+
+    <div class="block animated">
+        <div class="block-title">на связи</div>
+        <div class="block-entries">
+            <div class="entry">
+                <a href="http://t.me/roshman63" target="_blank"> Telegram</a>
+            </div>
+            <div class="entry">
+                <a href="mailto:jenkins07@f0x.pw">YA mail</a>
+            </div>
+            <div class="entry">
+                <a href="https://www.vk.com/roshman63" target="_blank">VK</a>
+            </div>
+            <div class="entry">
+                <a href="https://www.instagram.com/roshman63/" target="_blank">Instagram</a>
+            </div>
+            <div class="entry">
+                <a href="https://github.com/esp1ratto63" target="_blank">git</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="block animated">
+        <div class="block-title">чем занимаюсь</div>
+        <div class="entry">
+            <a href="https://band.link/XqAuB/" target="_blank"> автор песен ROSHMAN </a>
+        </div>
+        <div class="entry">
+            <a href="#" target="_blank">делаю музыку</a>
+        </div>
+        <div class="entry">
+            <a href="#" target="_blank">8 lvl faceit cs</a>
+        </div>
+        <div class="entry">
+            <a href="#" target="_blank">пока еще не придумал</a>
+        </div>
+        <div class="entry">
+            <a href="#" target="_blank">в разработке</a>
+        </div>
+    </div>
+</body>
+</html>
